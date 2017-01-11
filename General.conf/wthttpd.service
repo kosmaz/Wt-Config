@@ -1,0 +1,18 @@
+#deploy path: /etc/systemd/system/wthttpd.service
+#enable cmd: systemctl enable wthttpd.service
+[Unit]
+Description=Wt Webapps/Websites
+
+[Service]
+ExecStart=
+
+Type=simple
+Restart=on-failure
+
+# Security-conscious users may wish to research:
+#   PrivateTmp, PrivateDevices, ProtectSystem, ProtectHome
+#   CapabilityBoundingSet=
+#   NoNewPrivileges
+
+[Install]
+WantedBy=multi-user.target
